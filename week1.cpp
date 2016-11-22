@@ -17,22 +17,22 @@ int main()
 		for (int i = 0; i < len; ++i)
 		{
 			stre[2*i]=str[i];
-			stre[2*i+1]=HELP;
+			stre[2*i + 1]=HELP;
 		}
-		stre[2*len-1]=0;
+		stre[2*len - 1]=0;
 		//cout<<stre<<endl;
 		int P[2000005]={0};
 		int id,mx;
-		P[0]=1;
-		id=0;
-		mx=1;
-		for(int i=1;i<2*len-1;++i)
+		P[0] = 1;
+		id = 0;
+		mx = 1;
+		for(int i = 1; i < 2*len - 1; ++i)
 		{
 			P[i]=1;
-			if(i<mx)
+			if(i < mx)
 			{
 				int j=2*id-i;
-				if(P[j]<mx-i)
+				if(P[j] < mx - i)
 					P[i]=P[j];
 				else
 					P[i]=mx-i;
